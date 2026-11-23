@@ -7,7 +7,11 @@ namespace FilamentLibrary
     public enum FilamentType
     {
         PLA,
-        PETG
+        PLA_PLUS,
+        PETG,
+        PLA_LW,
+        TPU
+       
     }
 
     public class FilamentModel
