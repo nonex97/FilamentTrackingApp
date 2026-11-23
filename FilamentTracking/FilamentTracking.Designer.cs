@@ -87,6 +87,7 @@
             // 
             // Manufacturer
             // 
+            Manufacturer.DataPropertyName = "Manufacturer";
             Manufacturer.HeaderText = "Manufacturer";
             Manufacturer.Name = "Manufacturer";
             Manufacturer.ReadOnly = true;
@@ -94,6 +95,7 @@
             // 
             // Material
             // 
+            Material.DataPropertyName = "Type";
             Material.HeaderText = "Material";
             Material.Name = "Material";
             Material.ReadOnly = true;
@@ -101,6 +103,7 @@
             // 
             // Color
             // 
+            Color.DataPropertyName = "Color";
             Color.HeaderText = "Color";
             Color.Name = "Color";
             Color.ReadOnly = true;
@@ -108,6 +111,7 @@
             // 
             // Remaining
             // 
+            Remaining.DataPropertyName = "RemainingGrams";
             Remaining.HeaderText = "Remaining (g)";
             Remaining.Name = "Remaining";
             Remaining.ReadOnly = true;
@@ -115,6 +119,7 @@
             // 
             // Purchased
             // 
+            Purchased.DataPropertyName = "DatePurchased";
             Purchased.HeaderText = "Purchased";
             Purchased.Name = "Purchased";
             Purchased.ReadOnly = true;
