@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace FilamentTracking
 {
-    public partial class FilamentTracking : Form
+    public partial class FilamentTracking : Form, ISaveFilament
     {
         BindingList<FilamentModel> filaments = new BindingList<FilamentModel>();
 
@@ -37,10 +37,15 @@ namespace FilamentTracking
             deleteFilamentButton.Enabled = hasSelection;
         }
 
+        public void SaveFilament(FilamentModel filament)
+        {
+            filaments.Add(filament);
+        }
+
         private void addFilamentButton_Click(object sender, EventArgs e)
         {
             // Opens add filament form
-            FilamentEntry entry = new FilamentEntry();
+            FilamentEntry entry = new FilamentEntry(this);
             entry.Show();
 
         }

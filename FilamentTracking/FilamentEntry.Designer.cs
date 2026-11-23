@@ -34,7 +34,7 @@
             manufacturerLabel = new Label();
             nameLabel = new Label();
             colorLabel = new Label();
-            textBox1 = new TextBox();
+            colorText = new TextBox();
             weightLabel = new Label();
             priceLabel = new Label();
             dateLabel = new Label();
@@ -103,12 +103,12 @@
             colorLabel.TabIndex = 6;
             colorLabel.Text = "Color";
             // 
-            // textBox1
+            // colorText
             // 
-            textBox1.Location = new Point(188, 182);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(219, 39);
-            textBox1.TabIndex = 3;
+            colorText.Location = new Point(188, 182);
+            colorText.Name = "colorText";
+            colorText.Size = new Size(219, 39);
+            colorText.TabIndex = 3;
             // 
             // weightLabel
             // 
@@ -173,6 +173,7 @@
             addFilamentButton.TabIndex = 7;
             addFilamentButton.Text = "Add spool";
             addFilamentButton.UseVisualStyleBackColor = true;
+            addFilamentButton.Click += addFilamentButton_Click;
             // 
             // FilamentEntry
             // 
@@ -189,7 +190,7 @@
             Controls.Add(dateLabel);
             Controls.Add(priceLabel);
             Controls.Add(weightLabel);
-            Controls.Add(textBox1);
+            Controls.Add(colorText);
             Controls.Add(colorLabel);
             Controls.Add(manufacturerText);
             Controls.Add(manufacturerLabel);
@@ -212,7 +213,7 @@
         private Label manufacturerLabel;
         private Label nameLabel;
         private Label colorLabel;
-        private TextBox textBox1;
+        private TextBox colorText;
         private Label weightLabel;
         private Label priceLabel;
         private Label dateLabel;

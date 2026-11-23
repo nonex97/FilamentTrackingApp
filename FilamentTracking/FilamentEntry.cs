@@ -11,9 +11,12 @@ namespace FilamentTracking
 {
     public partial class FilamentEntry : Form
     {
-        public FilamentEntry()
+        ISaveFilament _parent;
+        public FilamentEntry(ISaveFilament parent)
         {
             InitializeComponent();
+
+            _parent = parent;
 
             materialComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
@@ -39,6 +42,29 @@ namespace FilamentTracking
             {
                 input.Select(0, input.Text.Length);
             }
+        }
+
+        private void addFilamentButton_Click(object sender, EventArgs e)
+        {
+            if (materialComboBox.SelectedItem is not FilamentType material)
+            {
+                MessageBox.Show("Please select a material!");
+                materialComboBox.Focus();
+                return;
+            }
+            FilamentModel filament = new FilamentModel
+            {
+                Manufacturer = manufacturerText.Text,
+                Color = colorText.Text,
+                Type = material,
+                Price = priceUpDown.Value,
+                RemainingGrams = weightUpDown.Value,
+                DatePurchased = DateOnly.FromDateTime(datePicker.Value)
+            };
+
+            _parent.SaveFilament(filament);
+
+            this.Close();
         }
     }
 }

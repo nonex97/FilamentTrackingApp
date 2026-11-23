@@ -51,6 +51,7 @@
             filamentTable.Name = "filamentTable";
             filamentTable.ReadOnly = true;
             filamentTable.RowHeadersWidth = 40;
+            filamentTable.RowTemplate.Height = 40;
             filamentTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             filamentTable.Size = new Size(896, 315);
             filamentTable.TabIndex = 0;
